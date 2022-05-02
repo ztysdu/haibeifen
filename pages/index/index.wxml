@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="MyBg">
+        <image src="/assets/image/bg.png" mode="widthFix"></image>
+    </view>
+
+<view class="center Page_Margin">
+    <vtu-panel v-class="panel"  title="所有内容">
+      <vtu-btn v-class="btn-class"type="primary" round="true" bindtap='btn1click' >所有内容</vtu-btn>
+    </vtu-panel>
+
+    <vtu-panel v-class="panel"  title="关键字搜索">
+      <vtu-btn v-class="btn-class"type="success" round="true" bindtap='btn2click'>关键字搜索</vtu-btn>
+    </vtu-panel>
+
+    <vtu-panel v-class="panel"  title="智能问答">
+      <vtu-btn v-class="btn-class"type="warning" round="true" bindtap='btn3click'>智能问答</vtu-btn>
+    </vtu-panel>
+    
+  </view>
+
+</view>

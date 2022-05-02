@@ -1,0 +1,62 @@
+<!--导入wxs模块,只能使用相对路径,并需要定义module-->
+<wxs src="./filter.wxs" module="util"></wxs> -->
+
+<import src="/miniprogram_npm/vtuweapp/template/list/template"/>
+<view class="container">
+  <vtu-navbar title="智能客服"></vtu-navbar>
+
+  <view class="chatListPanel is-{{showBMP?'showBMP':''}}" capture-bind:touchstart="hiddenBar" capture-bind:touchend="">
+    <scroll-view class="chatListPanel_scroll" enable-back-to-top="true" scroll-y>
+
+
+      <view wx:for='{{messageList}}' wx:key='item'>
+                
+      <view class="chatListPanel_li Page_Padding {{item.position}}">
+        <view class="detail">
+          <view class="image">
+            <image src="{{item.avatar}}" class="imageFill"></image>
+          </view>
+          <view class="mesbar">
+            <view class="customerName">{{item.nickname}}</view>
+            <view class="content">
+
+              <view wx:if="{{ item.messagetype === 'text'}}" class='nodata'>
+                <view class="content_text" style="word-break:break-all;  white-space:pre-wrap">{{util.format(item.content)}}</view>
+              </view>
+              <view wx:else >
+                <view class="content_text" >
+                <text>{{item.title}}\n</text>
+                <text wx:for="{{item.content}}" wx:for-item="item2"  wx:key="index2" style="word-break:break-all;  white-space:pre-wrap" bindtap='viewDetailHandler' data-question='{{item2}}'>{{util.format(item2)}}\n</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      
+      </view>
+
+      
+    </scroll-view>
+
+    <view class="chatToolPanel">
+      <vtu-input style="bottom:0px" title="输入问题" border  icon-color="#f5bf49" text-align="left"  placeholder="" value="{{inputValue}}" type="input" 
+      bindinput="inputChangeEvent"
+                 bindfocus="inputFocusEvent"
+                 bindblur="inputBlurEvent"
+                 bindconfirm="sendText"
+                 confirm-type="send"
+                 confirm-hold="true">
+        <vtu-btn slot="after" my-class="phoneNumberBtn" type="primary" bindtap="sendText" size="small">发送</vtu-btn>
+      </vtu-input>
+    </view>
+    <view class="round floating" bindtouchstart="streamRecord" style="color:red" bindtouchend="streamRecordEnd">
+        <image src="../../images/voice.png" width="64rpx" width="64rpx"></image>
+      </view>
+  </view>
+
+
+</view>
+
+  
+

@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/menu/menu",
+    "pages/chat/chat"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "dark",
+    "backgroundColorBottom": "#fff",
+    "backgroundColorTop": "#000"
+  },
+
+  "plugins": {
+    "WechatSI": {
+      "version": "0.3.4",
+      "provider": "wx069ba97219f66d99"
+    }
+  },
+  "usingComponents": {
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,164 @@
+.Cell_Span{
+  width: 100%;
+  margin-bottom: 10px;
+}
+.Cell_Span_Title{
+  width: 100%;
+  font-size: 14px;
+  height: 20px;
+  margin: 20px 0px 10px 0px;
+  color: var(--h2Color);
+}
+.style4HomeBar{
+  background: rgba(196, 56, 69, 0.86) !important;
+}
+.style4HomeBar:after{
+  border: 1px solid #ff7d82 !important;
+}
+.style4NavBar{
+    background: -webkit-linear-gradient(left, #fc455d 0%, rgba(189, 37, 92, 0.8) 100%);
+}
+
+.searchImg{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
+  background: #fff;
+  border-radius: 100px;
+  text-align: center;
+  line-height: 30px;
+  color:var(--h2Color);
+}
+.searchPanel{
+  width: calc(100% - 60px);
+  height: 100%;
+  background: #fff;
+  border-radius: 100px;
+  margin: 0px 10px 0 50px;
+}
+.searchPanel_icon{
+  width: 40px;
+  height: 100%;
+  float: left;
+  text-align: center;
+  color: var(--h2Color);
+}
+.searchPanel_input{
+  width: calc(100% - 40px);
+  float: left;
+  height: 100%;
+}
+.searchPanel_input input{
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+  height: 100%;
+  color: var(--h1Color);
+}
+
+.tabClass{
+  background: transparent !important;
+  height: 100%;
+  margin-left: 10px;
+}
+.tabActiveClass{
+  color: #fc455d !important;
+  font-size: 22px !important;
+  font-weight: bold !important;
+}
+
+
+
+
+.header-search{
+    position: relative;
+    margin: 10rpx 24rpx 40rpx 24rpx;
+}
+/*搜索图标*/
+.searchImg{
+    position: absolute;
+    left: 24rpx;
+    bottom: 18rpx;
+    width: 28rpx;
+    height: 28rpx;
+}
+/*搜索图标*/
+.searchImg2{
+    width: 28rpx;
+    height: 28rpx;
+}
+/*搜索文本框*/
+.searchInput{
+    width: 83%;
+    height: 64rpx;
+    font-size: 28rpx;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 64rpx;
+    color: #000000;
+    opacity: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    min-height: unset;
+    background: #f9f9f9;
+    border-radius: 200rpx;
+    padding: 0 58rpx;
+}
+/*清空文本框view*/
+.clearInput{
+    width: 100rpx;
+    height: 64rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+/*清空图标*/
+.clearInputImg{
+    width: 36rpx;
+    height: 36rpx;
+    flex-shrink: 0;
+}
+
+/*搜索结果*/
+.searchResult .searchText{
+    max-width: 93%;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26rpx;
+    line-height: 26rpx;
+    color: #4e70c7;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-bottom: 40rpx;
+}
+.searchResultItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+.searchResultItem-context{
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26rpx;
+    line-height: 26rpx;
+    color: #000000;
+    margin-left: 20rpx;
+    padding: 24rpx 0;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+

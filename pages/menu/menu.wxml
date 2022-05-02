@@ -1,0 +1,265 @@
+<view class="container">
+  <vtu-navbar title="主要内容" bind:load="navBarLoad"></vtu-navbar>
+
+  <!-- 菜单一的数据 -->
+  <view class="center">
+    <view class="Cell_Span">
+      <vtu-collapse accordion="{{true}}" bind:change="changeFather" color="#6c6c6c" active-color="orange">
+        <vtu-collapse-item title="{{data_1.title_f}}" > 
+          <vtu-collapse accordion="{{true}}" bind:change="changeChild" color="#6c6c6c" active-color="orange">
+            <view wx:for='{{data_1.content}}' wx:key='item'>
+              <vtu-collapse-item title="{{item.title_c}}" > 
+                <view style="white-space:pre-wrap">
+                      {{item.content}}
+                </view>
+              </vtu-collapse-item>
+            </view>
+          </vtu-collapse>
+        </vtu-collapse-item>
+      </vtu-collapse>
+    </view>
+  </view>
+
+
+  <!-- 菜单二的数据 -->
+  <view class="center" >
+    <view class="Cell_Span">
+      <vtu-collapse accordion="{{true}}" bind:change="changeFather" color="#6c6c6c" active-color="orange">
+        <vtu-collapse-item title="{{data_2.title_f}}" > 
+
+          <vtu-collapse accordion="{{true}}" bind:change="changeChild" color="#6c6c6c" active-color="orange">
+            <vtu-collapse-item title="{{data_2.content1.title_c1}}" > 
+                <view style="white-space:pre-wrap">
+                  <mp-html content="{{data_2.content1.content}}" />
+                </view>
+              </vtu-collapse-item>
+          </vtu-collapse>
+          <vtu-collapse accordion="{{true}}" bind:change="changeFather" color="#6c6c6c" active-color="orange">
+            <vtu-collapse-item title="{{data_2.title_c2}}" > 
+              <vtu-collapse accordion="{{true}}" bind:change="changeChild" color="#6c6c6c" active-color="orange">
+                <view wx:for='{{data_2.content2}}' wx:key='item'>
+                  <vtu-collapse-item title="{{item.title_c2_c}}" > 
+                    <view style="white-space:pre-wrap">
+                      <mp-html content="{{item.content}}" />
+                    </view>
+                  </vtu-collapse-item>
+                </view>
+              </vtu-collapse>
+            </vtu-collapse-item>
+          </vtu-collapse>
+
+          <vtu-collapse accordion="{{true}}" bind:change="changeFather" color="#6c6c6c" active-color="orange">
+            <vtu-collapse-item title="{{data_2.title_c3}}" > 
+              <vtu-collapse accordion="{{true}}" bind:change="changeChild" color="#6c6c6c" active-color="orange">
+                <view wx:for='{{data_2.content3}}' wx:key='item'>
+                  <vtu-collapse-item title="{{item.title_c3_c}}" > 
+                    <view style="white-space:pre-wrap">
+                      <mp-html content="{{item.content}}" />
+                    </view>
+                  </vtu-collapse-item>
+                </view>
+              </vtu-collapse>
+            </vtu-collapse-item>
+          </vtu-collapse>
+
+          <vtu-collapse accordion="{{true}}" bind:change="changeFather" color="#6c6c6c" active-color="orange">
+            <vtu-collapse-item title="{{data_2.title_c4}}" > 
+              <vtu-collapse accordion="{{true}}" bind:change="changeChild" color="#6c6c6c" active-color="orange">
+                <view wx:for='{{data_2.content4}}' wx:key='item'>
+                  <vtu-collapse-item title="{{item.title_c4_c}}" > 
+                    <view style="white-space:pre-wrap">
+                      <mp-html content="{{item.content}}" />
+                    </view>
+                  </vtu-collapse-item>
+                </view>
+              </vtu-collapse>
+            </vtu-collapse-item>
+          </vtu-collapse>
+
+          <vtu-collapse accordion="{{true}}" bind:change="changeFather" color="#6c6c6c" active-color="orange">
+            <vtu-collapse-item title="{{data_2.title_c5}}" > 
+              <vtu-collapse accordion="{{true}}" bind:change="changeChild" color="#6c6c6c" active-color="orange">
+                <view wx:for='{{data_2.content5}}' wx:key='item'>
+                  <vtu-collapse-item title="{{item.title_c5_c}}" > 
+                    <view style="white-space:pre-wrap">
+                      <mp-html content="{{item.content}}" />
+                    </view>
+                  </vtu-collapse-item>
+                </view>
+              </vtu-collapse>
+            </vtu-collapse-item>
+          </vtu-collapse>
+        </vtu-collapse-item>
+      </vtu-collapse>
+    </view>
+  </view>
+  
+
+
+  <!-- 菜单三的数据 -->
+  <view class="center">
+    <view class="Cell_Span">
+      <vtu-collapse accordion="{{true}}" bind:change="changeFather" color="#6c6c6c" active-color="orange">
+          <vtu-collapse-item title="社会法人信用信息评价标准" > 
+
+        <vtu-collapse accordion="{{true}}" bind:change="changeFather" color="#6c6c6c" active-color="orange">
+          <vtu-collapse-item title="{{data_3.title_c1}}" > 
+            <vtu-collapse accordion="{{true}}" bind:change="changeChild" color="#6c6c6c" active-color="orange">
+              <view wx:for='{{data_3.content1}}' wx:key='item'>
+                <vtu-collapse-item title="{{item.title_c1_c}}" > 
+                  <view style="white-space:pre-wrap">
+                    <mp-html content="{{item.content}}" />
+                   </view>
+                </vtu-collapse-item>
+              </view>
+            </vtu-collapse>
+          </vtu-collapse-item>
+        </vtu-collapse>
+          <vtu-collapse accordion="{{true}}" bind:change="changeFather" color="#6c6c6c" active-color="orange">
+            <vtu-collapse-item title="{{data_3.title_c2}}" > 
+              <vtu-collapse accordion="{{true}}" bind:change="changeChild" color="#6c6c6c" active-color="orange">
+                <view wx:for='{{data_3.content2}}' wx:key='item'>
+                  <vtu-collapse-item title="{{item.title_c2_c}}" > 
+                    <view style="white-space:pre-wrap">
+                      <mp-html content="{{item.content}}" />
+                    </view>
+                  </vtu-collapse-item>
+                </view>
+              </vtu-collapse>
+            </vtu-collapse-item>
+          </vtu-collapse>
+
+          <vtu-collapse accordion="{{true}}" bind:change="changeFather" color="#6c6c6c" active-color="orange">
+            <vtu-collapse-item title="{{data_3.title_c3}}" > 
+              <vtu-collapse accordion="{{true}}" bind:change="changeChild" color="#6c6c6c" active-color="orange">
+                <view wx:for='{{data_3.content3}}' wx:key='item'>
+                  <vtu-collapse-item title="{{item.title_c3_c}}" > 
+                    <view style="white-space:pre-wrap">
+                      <mp-html content="{{item.content}}" />
+                    </view>
+                  </vtu-collapse-item>
+                </view>
+              </vtu-collapse>
+            </vtu-collapse-item>
+          </vtu-collapse>
+
+          <vtu-collapse accordion="{{true}}" bind:change="changeFather" color="#6c6c6c" active-color="orange">
+            <vtu-collapse-item title="{{data_3.title_c4}}" > 
+              <vtu-collapse accordion="{{true}}" bind:change="changeChild" color="#6c6c6c" active-color="orange">
+                <view wx:for='{{data_3.content4}}' wx:key='item'>
+                  <vtu-collapse-item title="{{item.title_c4_c}}" > 
+                    <view style="white-space:pre-wrap">
+                      <mp-html content="{{item.content}}" />
+                    </view>
+                  </vtu-collapse-item>
+                </view>
+              </vtu-collapse>
+            </vtu-collapse-item>
+          </vtu-collapse>
+
+          <vtu-collapse accordion="{{true}}" bind:change="changeFather" color="#6c6c6c" active-color="orange">
+            <vtu-collapse-item title="{{data_3.title_c5}}" > 
+              <vtu-collapse accordion="{{true}}" bind:change="changeChild" color="#6c6c6c" active-color="orange">
+                <view wx:for='{{data_3.content5}}' wx:key='item'>
+                  <vtu-collapse-item title="{{item.title_c5_c}}" > 
+                    <view style="white-space:pre-wrap">
+                      <mp-html content="{{item.content}}" />
+                    </view>
+                  </vtu-collapse-item>
+                </view>
+              </vtu-collapse>
+            </vtu-collapse-item>
+          </vtu-collapse>
+      </vtu-collapse-item>
+          </vtu-collapse>
+    </view>
+  </view>
+
+
+  <!-- 菜单四的数据 -->
+  <view class="center">
+    <view class="Cell_Span">
+      <vtu-collapse accordion="{{true}}" bind:change="changeFather" color="#6c6c6c" active-color="orange">
+        <vtu-collapse-item title="{{data_4.title_f}}" > 
+          <vtu-collapse accordion="{{true}}" bind:change="changeChild" color="#6c6c6c" active-color="orange">
+            <view wx:for='{{data_4.content}}' wx:key='item'>
+              <vtu-collapse-item title="{{item.title_c}}" > 
+                <view style="white-space:pre-wrap">
+                  {{item.content}}
+                </view>
+            
+              </vtu-collapse-item>
+            </view>
+          </vtu-collapse>
+        </vtu-collapse-item>
+      </vtu-collapse>
+    </view>
+  </view>
+
+
+
+  <!-- 菜单五的数据 -->
+  <view class="center">
+    <view class="Cell_Span">
+      <vtu-collapse accordion="{{true}}" bind:change="changeFather" color="#6c6c6c" active-color="orange">
+          <vtu-collapse-item title="农村居民信用信息指标目录" > 
+
+        <vtu-collapse accordion="{{true}}" bind:change="changeFather" color="#6c6c6c" active-color="orange">
+          <vtu-collapse-item title="{{data_5.title_c1}}" > 
+            <vtu-collapse accordion="{{true}}" bind:change="changeChild" color="#6c6c6c" active-color="orange">
+              <view wx:for='{{data_5.content1}}' wx:key='item'>
+                <vtu-collapse-item title="{{item.title_c1_c}}" > 
+                  <view style="white-space:pre-wrap">
+                    <mp-html content="{{item.content}}" />
+                   </view>
+                </vtu-collapse-item>
+              </view>
+            </vtu-collapse>
+          </vtu-collapse-item>
+        </vtu-collapse>
+          <vtu-collapse accordion="{{true}}" bind:change="changeFather" color="#6c6c6c" active-color="orange">
+            <vtu-collapse-item title="{{data_5.title_c2}}" > 
+              <vtu-collapse accordion="{{true}}" bind:change="changeChild" color="#6c6c6c" active-color="orange">
+                <view wx:for='{{data_5.content2}}' wx:key='item'>
+                  <vtu-collapse-item title="{{item.title_c2_c}}" > 
+                    <view style="white-space:pre-wrap">
+                      <mp-html content="{{item.content}}" />
+                    </view>
+                  </vtu-collapse-item>
+                </view>
+              </vtu-collapse>
+            </vtu-collapse-item>
+          </vtu-collapse>
+
+          </vtu-collapse-item>
+        </vtu-collapse>
+    </view>
+  </view>
+
+
+  <!-- 菜单六的数据 -->
+  <view class="center">
+    <view class="Cell_Span">
+        <vtu-collapse accordion="{{true}}" bind:change="changeFather" color="#6c6c6c" active-color="orange">
+            <vtu-collapse-item title="{{data_6.title_f}}" > 
+                 <mp-html content="{{data_6.content}}" />
+            </vtu-collapse-item>
+          </vtu-collapse>
+    </view>
+  </view>
+
+
+  <!-- 菜单七的数据 -->
+  <view class="center">
+    <view class="Cell_Span">
+        <vtu-collapse accordion="{{true}}" bind:change="changeFather" color="#6c6c6c" active-color="orange">
+            <vtu-collapse-item title="{{data_7.title_f}}" > 
+                 <view style="white-space:pre-wrap">
+                {{data_7.content}}
+                </view>
+            </vtu-collapse-item>
+          </vtu-collapse>
+    </view>
+  </view>
+
+</view>

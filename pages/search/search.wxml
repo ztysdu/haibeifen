@@ -1,0 +1,40 @@
+<!--导入wxs模块,只能使用相对路径,并需要定义module-->
+<wxs src="./filter.wxs" module="util"></wxs> -->
+
+
+
+<view class="container">
+  <vtu-navbar title="搜索界面"></vtu-navbar>
+  <view class="center">
+    <view class="Cell_Span">
+      <view class="search">
+      <!--bindinput绑定里面输入的内容input把输入的值获取出来-->
+        <vtu-search search-shape="circle" bindinput = "input">
+          <!--执行此函数-->
+          <vtu-btn slot="append" type="primary" inlineBlock round shadow width="70px" size="small" data-type="1" bindtap = "getSearchListByName">搜索</vtu-btn>
+        </vtu-search>
+      </view>
+
+          <vtu-collapse accordion="{{true}}" bind:change="changeChild" color="#6c6c6c" active-color="orange">
+            <!--数组当前项的变量名默认为 item-->
+            <view wx:for='{{searchResultList}}' wx:key='item'>
+              <!--展示手风琴样式的子标题-->
+              <vtu-collapse-item title="{{item.subtitle}}" > 
+              <text class="content" wx:for="{{item.searchArrayTitle}}" wx:for-item="item2"  wx:key="index2" style="word-break:break-all; {{item2 == searchText?'color:red':''}}">{{util.format(item2)}}
+              </text>
+              <!--如果是表格形式-->
+                <view wx:if="{{ item.is_html === '1'}}" class='nodata'>
+                <!--按html去渲染-->
+                  <mp-html content="{{item.content}}" />
+                </view>
+                <!--换行处理-->
+                <view wx:else style="white-space:pre-wrap">
+                  <text class="content" wx:for="{{item.searchArrayContent}}" wx:for-item="item2"  wx:key="index2" style="word-break:break-all; {{item2 == searchText?'color:red':''}}">{{util.format(item2)}}</text>
+                </view>
+              </vtu-collapse-item>
+            </view>
+          </vtu-collapse>
+    </view>
+  </view>
+
+</view>
